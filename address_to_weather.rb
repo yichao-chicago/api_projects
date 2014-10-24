@@ -21,8 +21,9 @@ the_temperature = parsed_data2["currently"]["temperature"]
 the_hour_outlook = parsed_data2["hourly"]["data"][0]["summary"]
 the_day_outlook = parsed_data2["daily"]["data"][0]["summary"]
 
+centigrade = ((the_temperature - 32) *5 /9).round(0)
 # Ultimately, we want the following line to work when uncommented:
 
-puts "The current temperature at #{the_address} is #{the_temperature} degrees."
+puts "The current temperature at #{the_address} is #{the_temperature} degrees (#{centigrade} degrees centigrade)."
 puts "The outlook for the next hour is: #{the_hour_outlook}"
 puts "The outlook for the next day is: #{the_day_outlook}"
